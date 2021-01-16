@@ -7,7 +7,7 @@ DELETE_PROFILE_FAIL
 } from '../constants/profileConstants'
 
 
-export const profileCreate = (course, branch, year, image,  hobbies, bio) => async (dispatch, getState) => {
+export const profileCreate = (course, branch, year, image, hobbies, bio) => async (dispatch, getState) => {
     try {
       dispatch({
         type: CREATE_PROFILE_REQUEST,

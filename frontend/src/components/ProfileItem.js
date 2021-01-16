@@ -1,28 +1,10 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {Container, Card, Row, Col, Image, Button} from 'react-bootstrap'
+import {Container, Card, Row, Col, Image} from 'react-bootstrap'
 
 
 const ProfileItem = ({profile}) => {
     return (
-    //        <div className='profile bg-light border border-danger'>
-    //   <img src={profile.image} alt='default-img' className='rounded-circle photo' />
-    //   <div>
-    //     <h2>{profile.user.name}  {profile.user.name === "Haroon Khan" && <i style={{color: 'blue'}} className='fas fa-check-circle'></i>}</h2>
-    //     <p>
-    //      Course: {profile.course}
-    //     </p>
-    //     <p>
-    //         Branch: {profile.branch}
-    //     </p>
-    //     <p>
-    //         Year: {profile.year}
-    //     </p>
-    //     <Link to={`/students/${profile.user._id}`} className='btn btn-info'>
-    //       View Profile
-    //     </Link>
-    //   </div>
-    // </div>
     <Container>
      <Card className='mb-3'>
      <Row className='d-flex align-items-center flex-column mx-auto'>

@@ -7,7 +7,6 @@ import {notFound, errorHandler} from './middleware/errorMiddleware.js'
 import userRoutes from './routes/userRoutes.js'
 import profileRoutes from './routes/profileRoutes.js'
 import postRoutes from './routes/postRoutes.js'
-import uploadRoutes from './routes/uploadRoutes.js'
 
 dotenv.config()
 
@@ -25,7 +24,6 @@ app.use(express.json())
 app.use('/api', userRoutes)
 app.use('/api/profile', profileRoutes)
 app.use('/api/posts', postRoutes)
-app.use('/api/upload', uploadRoutes)
 
 const __dirname = path.resolve()
 
