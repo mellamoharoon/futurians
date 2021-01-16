@@ -21,7 +21,7 @@ const { userInfo} = userLogin
     {!userInfo && <Link to='/signup'><Button variant='warning'><i className='fas fa-user-plus'></i> Sign Up</Button></Link>}
   </p>
   <p className='mx-auto'>
-    {!userInfo && <Link to='/signin'><Button variant='warning'><i className='fas fa-user-graduate'></i> Sign In</Button></Link>}
+    {!userInfo && <Link to='/login'><Button variant='warning'><i className='fas fa-user-graduate'></i> Sign In</Button></Link>}
   </p>
   <p className='mx-auto'>
     {userInfo && <Link to='/posts'><Button variant='warning'><i className='fas fa-glass-cheers'></i> What's happening</Button></Link>}
