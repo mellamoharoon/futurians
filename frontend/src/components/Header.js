@@ -29,6 +29,9 @@ const Header = () => {
                             <LinkContainer to='/students'>
                             <Nav.Link><i className='fas fa-users'></i> Students</Nav.Link>
                             </LinkContainer>
+                            <LinkContainer to='/dashboard'>
+                            <Nav.Link><i className='fas fa-user-circle'></i> Make your profile</Nav.Link>
+                            </LinkContainer>
                             </>
                         ) :
                         <LinkContainer to='/signup'>
