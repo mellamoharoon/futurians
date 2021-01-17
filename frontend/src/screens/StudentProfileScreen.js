@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {Container, Row, Col, Image, Jumbotron, Badge} from 'react-bootstrap'
+import {Container, Row, Col, Image, Jumbotron, Badge, Button} from 'react-bootstrap'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
 import {getProfileById} from '../actions/profileActions'
@@ -11,6 +11,9 @@ const ProfileScreen = ({match}) => {
     const id = match.params.id
 
     const dispatch = useDispatch()
+
+    const userLogin = useSelector(state => state.userLogin)
+    const {userInfo} = userLogin
 
     const profileById = useSelector(state => state.profileById)
     const {loading, error, profile} = profileById
@@ -36,6 +39,7 @@ const ProfileScreen = ({match}) => {
   <Row>
     <Col className='mb-5'>
     <div className='d-flex align-items-center flex-column'>
+    {!userInfo && <Link to='/signup'><Button className='mb-2' variant='info'> Create account to know more</Button></Link>}
       <Image className='mb-4' style={{margin: 'auto', width: '250px', height: '250px'}} src={profile.image} roundedCircle />
       <h4 className='mb-6 text-success font-weight-bold' style={{margin: 'auto'}}>{profile.user.name}{'  '}{profile.user.name === "Haroon Khan" && <i style={{color: 'blue'}} className='fas fa-check-circle'></i>}</h4>
       </div>

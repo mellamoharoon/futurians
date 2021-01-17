@@ -27,7 +27,7 @@ const { userInfo} = userLogin
     {userInfo && <Link to='/posts'><Button variant='warning'><i className='fas fa-glass-cheers'></i> What's happening</Button></Link>}
   </p>
   <p className='mx-auto'>
-  {userInfo && <Link to='/students'><Button variant='warning'><i className='fas fa-user-friends'></i> Find your friends</Button></Link>}
+  <Link to='/students'><Button variant='warning'><i className='fas fa-user-friends'></i> Find your friends</Button></Link>
   </p>
 </Jumbotron>
 </Container>
