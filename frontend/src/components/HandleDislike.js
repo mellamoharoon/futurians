@@ -9,7 +9,7 @@ const HandleDislike = ({post}) => {
 
   const clickHandler = (id) => {
     dispatch(dislikePostAction(id))
-    setColor('primary')
+    setColor('danger')
     setCount(post.dislikes.length + 1)
   }
 
